@@ -33,6 +33,14 @@ export default function App() {
           style={{ width: 20, height: 20, marginLeft: 10 }}
         />
       </View>
+
+      {/* Post Image */}
+      <Image
+        source={require('./assets/person.png')}
+        style={{ width: '100%', height: 400, marginTop: 10 }}
+      />
+
+      {/* Post Actions */}
       <StatusBar style="auto" />
     </View>
   );
