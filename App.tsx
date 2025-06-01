@@ -84,6 +84,32 @@ export default function App() {
         <Text style={{ fontWeight: 'bold' }}>7 others</Text>
       </View>
 
+      {/* Top light grey line */}
+      <View style={{ bottom: 70, position: 'absolute', height: 1, backgroundColor: '#e0e0e0', width: '100%' }} />
+
+      {/* Footer */}
+      <View style={[styles.action, { bottom: 30, position: 'absolute' }]}>
+        <Image
+          source={require('./assets/home.png')}
+          style={{ width: 25, height: 25, marginRight: 10 }}
+        />
+        <Image
+          source={require('./assets/search.png')}
+          style={{ width: 25, height: 25, marginRight: 10 }}
+        />
+        <Image
+          source={require('./assets/reel.png')}
+          style={{ width: 25, height: 25, marginRight: 10 }}
+        />
+        <Image
+          source={require('./assets/shop.png')}
+          style={{ width: 25, height: 25, marginRight: 10 }}
+        />
+        <Image
+          source={require('./assets/profile.png')}
+          style={{ width: 25, height: 25, marginRight: 10 }}
+        />
+      </View>
       <StatusBar style="auto" />
     </View>
   );
