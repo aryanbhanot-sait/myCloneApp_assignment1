@@ -17,7 +17,7 @@ export default function App() {
       </View>
 
       {/* Post Top Portion */}
-      <View style={{ paddingTop: 10, justifyContent: 'space-between', flexDirection: 'row', width: '100%', paddingHorizontal: 20 }}>
+      <View style={styles.action}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
           <Image
             source={require('./assets/waterfall.png')}
@@ -41,6 +41,49 @@ export default function App() {
       />
 
       {/* Post Actions */}
+      <View style={styles.action}>
+        <View style={{ flexDirection: 'row' }}>
+          <Image
+            source={require('./assets/heart.png')}
+            style={{ width: 25, height: 25 }}
+          />
+          <Image
+            source={require('./assets/comment.png')}
+            style={{ width: 25, height: 25, marginLeft: 15 }}
+          />
+          <Image
+            source={require('./assets/send.png')}
+            style={{ width: 25, height: 25, marginLeft: 15 }}
+          />
+        </View>
+        <Image
+          source={require('./assets/bookmark.png')}
+          style={{ width: 25, height: 25, marginLeft: 10 }}
+        />
+      </View>
+
+      {/* Post Likes and Comments */}
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <View style={{ flexDirection: 'row' }}>
+          <Image
+            source={require('./assets/people1.png')}
+            style={[styles.likeImage, { marginLeft: 0 }]}
+          />
+          <Image
+            source={require('./assets/people2.png')}
+            style={styles.likeImage}
+          />
+          <Image
+            source={require('./assets/people3.png')}
+            style={styles.likeImage}
+          />
+        </View>
+        <Text style={{ marginLeft: 10 }}>Liked by </Text>
+        <Text style={{ fontWeight: 'bold' }}>paisley.print.48 </Text>
+        <Text>and </Text>
+        <Text style={{ fontWeight: 'bold' }}>7 others</Text>
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -60,4 +103,25 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     height: 45,
   },
+  action: {
+    paddingTop: 10,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    width: '100%',
+    paddingHorizontal: 20
+  },
+  likeImage: {
+    width: 25,
+    height: 25,
+    borderRadius: 100,
+    borderColor: '#fff',
+    borderWidth: 2,
+    zIndex: 1,
+    marginLeft: -10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.4,
+    shadowRadius: 1.41,
+    elevation: 2
+  }
 });
