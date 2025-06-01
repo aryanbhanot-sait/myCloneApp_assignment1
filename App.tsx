@@ -1,9 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <View>
+        <Image
+          source={require('../assets/back.png')}
+          style={{ width: 100, height: 100 }}
+        />
+      </View>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
