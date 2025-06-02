@@ -16,6 +16,9 @@ export default function App() {
         </View>
       </View>
 
+      {/* Top light grey line */}
+      <View style={{ height: 1, backgroundColor: '#e0e0e0', width: '100%' }} />
+
       {/* Post Top Portion */}
       <View style={styles.action}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
@@ -82,6 +85,26 @@ export default function App() {
         <Text style={{ fontWeight: 'bold' }}>paisley.print.48 </Text>
         <Text>and </Text>
         <Text style={{ fontWeight: 'bold' }}>7 others</Text>
+      </View>
+
+      {/* Next Few Lines */}
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ fontWeight: 'bold' }}>frenchie_fry39 </Text>
+        <Text>Fresh shot on a sunny day!</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ color: 'gray' }}>View all 12 comments</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ fontWeight: 'bold' }}>lil_wyatts838 </Text>
+        <Text>Awesome Tones</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ fontWeight: 'bold' }}>pai.in.a.pod </Text>
+        <Text>Gorg. Love it!</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ color: 'gray', fontSize: 12 }}>Love it!</Text>
       </View>
 
       {/* Top light grey line */}
