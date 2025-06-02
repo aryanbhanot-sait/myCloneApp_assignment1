@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, Alert } from 'react-native';
 
 export default function App() {
   return (
@@ -16,17 +16,20 @@ export default function App() {
         </View>
       </View>
 
-      {/* Post Top Portion */}
+      {/* Top light grey line */}
+      <View style={{ height: 1, backgroundColor: '#e0e0e0', width: '100%' }} />
+
+      {/* Post Top Portion (it is pressable and triggers the alert as well) */}
       <View style={styles.action}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
           <Image
             source={require('./assets/waterfall.png')}
             style={{ width: 50, height: 50, borderRadius: 100 }}
           />
-          <View style={{ paddingTop: 5 }}>
+          <Pressable style={{ paddingTop: 5 }} onPress={() => Alert.alert("Assignment 1 Completed")}>
             <Text style={{ fontWeight: 'bold' }}>ootd_everyday</Text>
             <Text style={{ flex: 1, fontSize: 12 }}>via frenchie_fry39</Text>
-          </View>
+          </Pressable>
         </View>
         <Image
           source={require('./assets/more.png')}
@@ -37,8 +40,8 @@ export default function App() {
       {/* Post Image */}
       <Image
         source={require('./assets/person.png')}
-        style={{ width: '100%', height: 400, marginTop: 10 }}
-      />
+        style={{ width: '100%', height: 430, marginTop: 10 }}>
+      </Image>
 
       {/* Post Actions */}
       <View style={styles.action}>
@@ -82,6 +85,26 @@ export default function App() {
         <Text style={{ fontWeight: 'bold' }}>paisley.print.48 </Text>
         <Text>and </Text>
         <Text style={{ fontWeight: 'bold' }}>7 others</Text>
+      </View>
+
+      {/* Next Few Lines */}
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ fontWeight: 'bold' }}>frenchie_fry39 </Text>
+        <Text>Fresh shot on a sunny day!</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ color: 'gray' }}>View all 12 comments</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ fontWeight: 'bold' }}>lil_wyatts838 </Text>
+        <Text>Awesome Tones</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ fontWeight: 'bold' }}>pai.in.a.pod </Text>
+        <Text>Gorg. Love it!</Text>
+      </View>
+      <View style={[styles.action, { justifyContent: 'flex-start' }]}>
+        <Text style={{ color: 'gray', fontSize: 12 }}>Love it!</Text>
       </View>
 
       {/* Top light grey line */}
