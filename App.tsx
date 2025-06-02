@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, Alert } from 'react-native';
 
 export default function App() {
   return (
@@ -19,17 +19,17 @@ export default function App() {
       {/* Top light grey line */}
       <View style={{ height: 1, backgroundColor: '#e0e0e0', width: '100%' }} />
 
-      {/* Post Top Portion */}
+      {/* Post Top Portion (it is pressable and triggers the alert as well) */}
       <View style={styles.action}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
           <Image
             source={require('./assets/waterfall.png')}
             style={{ width: 50, height: 50, borderRadius: 100 }}
           />
-          <View style={{ paddingTop: 5 }}>
+          <Pressable style={{ paddingTop: 5 }} onPress={() => Alert.alert("Assignment 1 Completed")}>
             <Text style={{ fontWeight: 'bold' }}>ootd_everyday</Text>
             <Text style={{ flex: 1, fontSize: 12 }}>via frenchie_fry39</Text>
-          </View>
+          </Pressable>
         </View>
         <Image
           source={require('./assets/more.png')}
@@ -40,8 +40,8 @@ export default function App() {
       {/* Post Image */}
       <Image
         source={require('./assets/person.png')}
-        style={{ width: '100%', height: 400, marginTop: 10 }}
-      />
+        style={{ width: '100%', height: 430, marginTop: 10 }}>
+      </Image>
 
       {/* Post Actions */}
       <View style={styles.action}>
